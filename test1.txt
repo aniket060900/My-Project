@@ -1,4 +1,3 @@
-monday class
 moving and renaming file in git .
 commanf=d to remove any file using in the git 
 git rm (file name)
@@ -26,6 +25,7 @@ branch merging and resoliving
 git merge (branch name )
  
 rm -rf .git ----- clear .git file
+ comm----git init 
  
  
  
@@ -49,3 +49,52 @@ git commit -a -m " massege"(add and commit both )
 
 vi (file_name ) for insert (i) and esc , for quit :qw
 
+#revert
+git revert < file hash code>
+
+#git reset shift pointer (it remove the commit)
+#git revert---it add additionl commit that is opposite to commit
+
+git reset soft == it does not touch the index file or the working tree at all (but reset
+
+git mixed -- it reset the index but not be working tree .
+
+# git rm --cached (file name )---untrack mode
+
+# git clean -n
+
+# git clean -i -d
+
+
+#git stash --- you don't want to make a commit of half done work but git stashing allows usge.generaly shash store safly in a hindden place git temp save your data without commit 
+commd--- git stash 
+----git stash list
+----git stash show
+----git stash apply stash@{0}(stash id)
+----git stash drop stash@{0}
+
+GIT stash pop---Git shash pop() allows the user to remove the changes from the stash and applyed them to your working file.
+The main diff b-w apply and pop is the stash pop delete the stash fro the stack after its apply but git apply doesn't delete the stash.
+
+commd---git stash pop
+
+git stash clear -- (deleting all the stashing at onec)
+
+git stash -m "added stash 2" (message)
+
+git tag-- its a highlighter which highlight some commit. it dosen't create another commit.
+comm--- git tag <any name>
+
+git tag --list
+git push --tag
+
+git push origin (tag name)
+
+#deletion of a tag
+git tag delete (tag name)
+
+deletion of a tag from remote repo
+git push origin --delete <name> 
+
+#git rewrites commit from one branch into another branch and its a useful alternative to merging because its give us a cleaner repo and can help us shoot and bug faster
+ git rebase branch_name
